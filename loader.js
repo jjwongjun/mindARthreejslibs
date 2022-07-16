@@ -38,7 +38,7 @@ export const loadTexture = (path) => {
     const loader = new THREE.TextureLoader();
     loader.load(path, (texture) => {
       resolve(texture);
-    }); 
+    });
   });
 }
 
@@ -49,7 +49,7 @@ export const loadTextures = (paths) => {
     promises.push(new Promise((resolve, reject) => {
       loader.load(paths[i], (texture) => {
 	resolve(texture);
-      }); 
+      });
     }));
   }
   return Promise.all(promises);
